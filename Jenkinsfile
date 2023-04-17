@@ -4,9 +4,9 @@ pipeline {
     stages {
         stage('clone_the_code') {
             steps {
-                mail subject: 'Build Started',
-                  body: 'Build started',
-                  to: 'maheshmech9999@gmail.com'
+                //mail subject: 'Build Started',
+                  //body: 'Build started',
+                  //to: 'maheshmech9999@gmail.com'
                 git branch: 'master',
                        url: 'https://github.com/maheshryali123/openmrs-core.git'
             }
@@ -57,7 +57,8 @@ pipeline {
            }
        }
     }
-    post {
+}
+    /*post {
         always {
             echo 'Job completed'
             mail subject: 'build completed',
