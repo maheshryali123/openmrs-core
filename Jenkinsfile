@@ -58,20 +58,4 @@ pipeline {
        }
     }
 }
-    /*post {
-        always {
-            echo 'Job completed'
-            mail subject: 'build completed',
-                  body: 'Build completed',
-                    to: 'maheshmech9999@gmail.com'
-        }
-        failure {
-            mail subject: 'Build failed',
-                body: 'Build failed',
-                  to: 'maheshmech9999@gmail.com'
-        }
-        success {
-            junit '**/surefire-reports/*.xml'
-        }
-    }
-}
+    
