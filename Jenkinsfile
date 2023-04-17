@@ -27,8 +27,7 @@ pipeline {
             steps {
                 rtServer (
                     id: "jfrogserver",
-                    url: "https://projectsunique.jfrog.io/",
-                    crendentialsId: CREDENTIALS
+                    url: "https://projectsunique.jfrog.io/"
                 )
                 rtMavenDeployer (
                     id: "MAVEN_DEPLOYER",
