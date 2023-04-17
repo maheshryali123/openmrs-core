@@ -11,11 +11,11 @@ pipeline {
                        url: 'https://github.com/maheshryali123/openmrs-core.git'
             }
         }
-        //stage('Build_the_package') {
-            //steps {
-                //sh 'mvn clean package'
-            //}
-        //}
+        stage('Build_the_package') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
         //stage('sonar_scan') {
             //steps{
             //withSonarQubeEnv('sonar_scanner') {
