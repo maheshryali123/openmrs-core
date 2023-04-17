@@ -1,6 +1,6 @@
 pipeline {
     agent { label 'OPENMRS' }
-    triggers { POLLISCM('* * * * *') }
+    triggers { POLLSCM('* * * * *') }
     stages {
         stage('clone_the_code') {
             steps {
