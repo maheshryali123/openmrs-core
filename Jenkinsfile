@@ -1,6 +1,6 @@
 pipeline {
     agent { label 'OPENMRS' }
-    triggers {'* * * * *'}
+    triggers { POLLISCM('* * * * *') }
     stages {
         stage('clone_the_code') {
             steps {
@@ -14,8 +14,10 @@ pipeline {
             }
         }
         stage('sonar_scan') {
+            steps{
             withSonarQubeEnv('sonar_scanner') {
                 sh 'mvn clean package sonar:sonar'
+            }
             }
         }
     }
